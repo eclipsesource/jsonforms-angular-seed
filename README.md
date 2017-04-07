@@ -6,7 +6,8 @@ You still have to run `npm install` first.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Install the Angular CLI if you do not already have it with `npm install -g @angular/cli`.
+Then run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Further help
 
