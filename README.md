@@ -1,20 +1,31 @@
-# JsonformsAngularSeed
+# JSONForms Angular Seed
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+JSONForms Angular Seed.
 
-## Setup
+## Installation
 
-[Install node](https://nodejs.org/en/download/) in case you do not have it.
-Clone this Git repository and run `npm install`.
-Install the Angular CLI if you do not already have it with `npm install -g @angular/cli`.
+Run `npm ci` to install the necessary dependencies.
 
-## Build and Run
+## Development server
 
-Then run `ng serve` for a dev server. Navigate to [`http://localhost:4200/`](http://localhost:4200/). The app will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to [http://localhost:4200/](http://localhost:4200/). The app will automatically reload if you change any of the source files.
 
-## About
-This minimal seed applications is a show case for [JSON Forms](http://jsonforms.io). It defines one Angular component for the <app-root> element used in [index.html](https://github.com/eclipsesource/jsonforms-angular-seed/blob/master/src/index.html). The component makes use of the <jsonforms> element, see [app.component.html](https://github.com/eclipsesource/jsonforms-angular-seed/blob/master/src/app/app.component.html). A JSON Schema, UI Schema and JSON object are defined in [app.component.ts](https://github.com/eclipsesource/jsonforms-angular-seed/blob/master/src/app/app.component.ts).
+## Build
 
-## Further help
+Run `npm build` to build the project. The build artifacts will be stored in the `dist` directory. Use the `-prod` flag for a production build.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Running unit tests
+
+Run `npm test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `npm e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Customizations
+
+For this showcase we hardcoded the schemas (`schema.json`, `uischema.json`) and the data (`data.ts`). You can replace them with your own or handle them completely dynamically.
+
+We implemented three custom controls (`custom.autocomplete.ts`, `lang.control.ts` and `data.control.ts`). If you don't need them just remove them! See also `store.ts` where these custom renderers are registered.
+
+In `app.module.ts` we customized the validation and executed a manual resolving step before handing the schemas over to JSON Forms. These steps are optional and can be skipped if needed.
