@@ -1,5 +1,5 @@
 {
-  "extends": "../tsconfig.json",
+  "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "../out-tsc/app"
 },
@@ -8,6 +8,8 @@
     "polyfills.ts"
   ],
   "include": [
-    "src/**/*.d.ts"
+    "**/*.d.ts",
+    "**/*.ts",
+    "./assets/*.json"
   ]
 }
