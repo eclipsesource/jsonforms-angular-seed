@@ -1,4 +1,4 @@
-# JSONForms Angular Seed
+# JSON Forms Angular Seed
 
 JSONForms Angular Seed.
 
