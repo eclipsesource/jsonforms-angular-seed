@@ -12,5 +12,8 @@
     {
       "path": "./src/tsconfig.spec.json"
     }
-  ]
+  ],
+  "compilerOptions": {
+    "target": "es2018"
+  }
 }
