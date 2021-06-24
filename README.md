@@ -12,7 +12,7 @@ Run `npm start` for a dev server. Navigate to [http://localhost:4200/](http://lo
 
 ## Build
 
-Run `npm build` to build the project. The build artifacts will be stored in the `dist` directory. Use the `-prod` flag for a production build.
+Run `npm build` to build the project. The build artifacts will be stored in the `dist` directory. Use the `--configuration production` flag for a production build.
 
 ## Running unit tests
 
@@ -28,4 +28,4 @@ For this showcase we hardcoded the schemas (`schema.json`, `uischema.json`) and 
 
 We implemented three custom controls (`custom.autocomplete.ts`, `lang.control.ts` and `data.control.ts`). If you don't need them just remove them! See also `store.ts` where these custom renderers are registered.
 
-In `app.module.ts` we customized the validation and executed a manual resolving step before handing the schemas over to JSON Forms. These steps are optional and can be skipped if needed.
+In `app.component.ts` we customized the validation. This step is optional and can be skipped if needed.

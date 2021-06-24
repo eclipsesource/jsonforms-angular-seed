@@ -24,9 +24,6 @@
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true,
-    "enableIvy":true
-  },
-  "paths": {
-    "json-schema-ref-parser": ["node_modules/json-schema-ref-parser/dist/ref-parser.js"]
+    "enableIvy": true
   }
 }
