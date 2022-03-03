@@ -7,7 +7,6 @@ import { LangComponent } from './lang.control';
 import uischemaAsset from '../assets/uischema.json';
 import schemaAsset from '../assets/schema.json';
 import dataAsset from './data';
-import AJV from 'ajv';
 import { parsePhoneNumber } from 'libphonenumber-js';
 
 const departmentTester: Tester = and(
@@ -48,11 +47,10 @@ export class AppComponent {
   uischema = uischemaAsset;
   schema = schemaAsset;
   data = dataAsset;
+  i18n = {locale: 'de-DE'}
   ajv = createAjv({
-    schemaId: 'auto',
-    allErrors: true,
-    jsonPointers: true,
-    errorDataPath: 'property'
+    schemaId: 'id',
+    allErrors: true
   });
   constructor() {
     this.ajv.addFormat('time', '^([0-1][0-9]|2[0-3]):[0-5][0-9]$');

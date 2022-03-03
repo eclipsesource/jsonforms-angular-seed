@@ -24,6 +24,6 @@ export class LangComponent extends JsonFormsControl {
   }
 
   changeLocale(localeString: string) {
-    this.jsonFormsService.updateLocale(setLocale(localeString));
+    this.jsonFormsService.updateI18n(setLocale(localeString));
   }
 }
