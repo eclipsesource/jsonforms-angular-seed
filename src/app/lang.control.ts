@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { JsonFormsAngularService, JsonFormsControl } from '@jsonforms/angular';
 import { getLocale, setLocale } from '@jsonforms/core';
+import { DateAdapter } from '@angular/material/core';
 
 @Component({
   selector: 'app-lang-component',
@@ -14,9 +15,11 @@ import { getLocale, setLocale } from '@jsonforms/core';
 export class LangComponent extends JsonFormsControl {
 
   currentLocale: string;
+  dateAdapter;
 
-  constructor(service: JsonFormsAngularService) {
+  constructor(service: JsonFormsAngularService, dateAdapter: DateAdapter<Date>) {
     super(service);
+    this.dateAdapter = dateAdapter;
   }
 
   mapAdditionalProps() {
@@ -25,5 +28,6 @@ export class LangComponent extends JsonFormsControl {
 
   changeLocale(localeString: string) {
     this.jsonFormsService.updateI18n(setLocale(localeString));
+    this.dateAdapter.setLocale(localeString);
   }
 }
