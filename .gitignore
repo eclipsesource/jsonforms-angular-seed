@@ -43,3 +43,6 @@ testem.log
 .DS_Store
 Thumbs.db
 .yalc
+
+# Angular cache
+.angular/
