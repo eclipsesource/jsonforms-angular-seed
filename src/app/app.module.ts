@@ -1,6 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -26,6 +27,7 @@ import { LangComponent } from './lang.control';
     JsonFormsAngularMaterialModule,
     MatAutocompleteModule,
     MatProgressSpinnerModule,
+    MatFormFieldModule,
     HttpClientModule
   ],
   schemas: [],
