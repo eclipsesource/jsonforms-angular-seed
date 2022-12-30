@@ -31,7 +31,7 @@
     "json-refs": "^3.0.4",
     "libphonenumber-js": "^1.6.8",
     "path": "^0.12.7",
-    "random-words": "^1.1.0",
+    "random-words": "^1.2.0",
     "rxjs": "^6.5.4",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
