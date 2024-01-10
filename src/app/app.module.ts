@@ -29,7 +29,6 @@ import { LangComponent } from './lang.control';
     HttpClientModule
   ],
   schemas: [],
-  entryComponents: [CustomAutocompleteControlRenderer, LangComponent, DataDisplayComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {

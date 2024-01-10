@@ -11,5 +11,10 @@
     "**/*.d.ts",
     "**/*.ts",
     "./assets/*.json"
+  ],
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts",
+    "environments"
   ]
 }

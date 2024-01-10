@@ -1,4 +1,4 @@
-import * as randomWords from 'random-words';
+import {generate} from "random-words";
 import {debounceTime, finalize, tap} from 'rxjs/operators';
 import {switchMap} from 'rxjs/operators';
 import {delay} from 'rxjs/operators';
@@ -7,7 +7,7 @@ import {AutocompleteControlRenderer} from '@jsonforms/angular-material';
 import {Observable} from 'rxjs';
 import {Component} from '@angular/core';
 
-const words: string[] = randomWords(1000);
+const words: string[] = generate(1000);
 
 const fetchSuggestions = (input: string): Observable<string[]> => {
   const filtered: string[] = words.filter(word => word.startsWith(input));
