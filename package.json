@@ -33,7 +33,7 @@
     "random-words": "^2.0.0",
     "rxjs": "^6.5.4",
     "tslib": "^2.0.0",
-    "zone.js": "^0.13.3"
+    "zone.js": "~0.13.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.0.0",
@@ -42,8 +42,7 @@
     "@angular/language-service": "^16.0.0",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.2",
-    "@types/node": "^18.11.1",
-    "codelyzer": "^6.0.2",
+    "@types/node": "^18.19.8",
     "jasmine-core": "~3.8.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~6.3.2",
@@ -53,7 +52,6 @@
     "karma-jasmine-html-reporter": "^1.5.0",
     "protractor": "~7.0.0",
     "ts-node": "~4.1.0",
-    "tslint": "~6.1.0",
     "typescript": "4.9.3"
   }
 }
