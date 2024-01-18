@@ -2,7 +2,7 @@
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "outDir": "../out-tsc/app"
-},
+  },
   "files": [
     "main.ts",
     "polyfills.ts"
@@ -11,5 +11,10 @@
     "**/*.d.ts",
     "**/*.ts",
     "./assets/*.json"
+  ],
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts",
+    "environments"
   ]
 }

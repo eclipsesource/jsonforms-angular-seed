@@ -7,15 +7,15 @@
     "declaration": true,
     "downlevelIteration": true,
     "experimentalDecorators": true,
-    "module": "esnext",
+    "module": "ES2022",
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2015",
+    "target": "ES2022",
     "typeRoots": [
       "node_modules/@types"
     ],
     "lib": [
-      "es2018",
+      "ES2022",
       "dom"
     ],
     "allowSyntheticDefaultImports": true,
