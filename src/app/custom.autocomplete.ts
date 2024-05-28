@@ -7,7 +7,7 @@ import {AutocompleteControlRenderer} from '@jsonforms/angular-material';
 import {Observable} from 'rxjs';
 import {Component} from '@angular/core';
 
-const words: string[] = generate(1000);
+const words: string[] = generate(1000) as string[];
 
 const fetchSuggestions = (input: string): Observable<string[]> => {
   const filtered: string[] = words.filter(word => word.startsWith(input));
