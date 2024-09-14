@@ -22,9 +22,9 @@
     "@angular/platform-browser": "^17.0.0",
     "@angular/platform-browser-dynamic": "^17.0.0",
     "@angular/router": "^17.0.0",
-    "@jsonforms/angular": "3.3.0",
-    "@jsonforms/angular-material": "3.3.0",
-    "@jsonforms/core": "3.3.0",
+    "@jsonforms/angular": "3.4.0-beta.0",
+    "@jsonforms/angular-material": "3.4.0-beta.0",
+    "@jsonforms/core": "3.4.0-beta.0",
     "ajv": "^8.6.1",
     "core-js": "^2.4.1",
     "json-refs": "^3.0.4",
@@ -43,13 +43,14 @@
     "@types/jasmine": "~4.3.0",
     "@types/node": "^18.19.8",
     "jasmine-core": "~4.6.0",
+    "jasmine-spec-reporter": "^7.0.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "protractor": "~7.0.0",
-    "ts-node": "~4.1.0",
+    "ts-node": "~10.9.2",
     "typescript": "~5.2.2"
   }
 }

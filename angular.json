@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "jsonforms-angular-material-playground:build"
+            "buildTarget": "jsonforms-angular-material-playground:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "jsonforms-angular-material-playground:build:production"
+              "buildTarget": "jsonforms-angular-material-playground:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "jsonforms-angular-material-playground:build"
+            "buildTarget": "jsonforms-angular-material-playground:build"
           }
         },
         "test": {
