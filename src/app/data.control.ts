@@ -4,17 +4,18 @@ import { ControlProps } from '@jsonforms/core';
 
 @Component({
   selector: 'app-data-component',
-  template: '<pre>{{dataAsString}}</pre>'
+  template: '<pre>{{dataAsString}}</pre>',
+  standalone: false
 })
 export class DataDisplayComponent extends JsonFormsControl {
 
-  dataAsString: string;
+  dataAsString: string | undefined;
 
   constructor(service: JsonFormsAngularService) {
     super(service);
   }
 
-  public mapAdditionalProps(props: ControlProps) {
+  public override mapAdditionalProps(props: ControlProps) {
     this.dataAsString = JSON.stringify(props.data, null, 2);
   }
 }
