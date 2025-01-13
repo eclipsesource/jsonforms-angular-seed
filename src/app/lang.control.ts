@@ -10,11 +10,12 @@ import { DateAdapter } from '@angular/material/core';
     <p>Current locale: {{currentLocale}}</p>
     <button mat-raised-button color="primary" (click)="changeLocale('de-DE')">de-DE</button>
     <button mat-raised-button color="primary" (click)="changeLocale('en-US')">en-US</button>
-  `
+  `,
+  standalone: false
 })
 export class LangComponent extends JsonFormsControl {
 
-  currentLocale: string;
+  currentLocale: string | undefined;
   dateAdapter;
 
   constructor(service: JsonFormsAngularService, dateAdapter: DateAdapter<Date>) {
@@ -22,7 +23,7 @@ export class LangComponent extends JsonFormsControl {
     this.dateAdapter = dateAdapter;
   }
 
-  mapAdditionalProps() {
+  override mapAdditionalProps() {
     this.currentLocale = getLocale(this.jsonFormsService.getState());
   }
 

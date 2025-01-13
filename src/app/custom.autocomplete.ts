@@ -39,13 +39,14 @@ const fetchSuggestions = (input: string): Observable<string[]> => {
             </mat-autocomplete>
             <mat-error>{{ error }}</mat-error>
         </mat-form-field>
-    `
+    `,
+  standalone: false
 })
 export class CustomAutocompleteControlRenderer extends AutocompleteControlRenderer {
 
-  isLoading: boolean;
+  isLoading: boolean = false;
 
-  ngOnInit() {
+  override ngOnInit() {
     super.ngOnInit();
     this.form.valueChanges
       .pipe(
