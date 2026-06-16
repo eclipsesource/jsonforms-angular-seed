@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { JsonFormsAngularService, JsonFormsControl } from '@jsonforms/angular';
 import { getLocale, setLocale } from '@jsonforms/core';
 import { DateAdapter } from '@angular/material/core';
@@ -16,12 +16,7 @@ import { DateAdapter } from '@angular/material/core';
 export class LangComponent extends JsonFormsControl {
 
   currentLocale: string | undefined;
-  dateAdapter;
-
-  constructor(service: JsonFormsAngularService, dateAdapter: DateAdapter<Date>) {
-    super(service);
-    this.dateAdapter = dateAdapter;
-  }
+  dateAdapter = inject(DateAdapter<Date>);
 
   override mapAdditionalProps() {
     this.currentLocale = getLocale(this.jsonFormsService.getState());

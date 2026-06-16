@@ -6,11 +6,12 @@ import {of} from 'rxjs';
 import {AutocompleteControlRenderer} from '@jsonforms/angular-material';
 import {Observable} from 'rxjs';
 import {Component} from '@angular/core';
+import { EnumOption } from "@jsonforms/core";
 
 const words: string[] = generate(1000) as string[];
 
-const fetchSuggestions = (input: string): Observable<string[]> => {
-  const filtered: string[] = words.filter(word => word.startsWith(input));
+const fetchSuggestions = (input: string): Observable<EnumOption[]> => {
+  const filtered: EnumOption[] = words.filter(word => word.startsWith(input)).map(word => ({ label: word, value: word }));
   return of(filtered).pipe(delay(1000));
 };
 
@@ -58,6 +59,6 @@ export class CustomAutocompleteControlRenderer extends AutocompleteControlRender
           )
         )
       )
-      .subscribe((options: string[]) => this.options = options);
+      .subscribe((options) => this.options = options);
   }
 }

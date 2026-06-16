@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { JsonFormsAngularService, JsonFormsControl } from '@jsonforms/angular';
+import { ChangeDetectorRef, Component, inject } from '@angular/core';
+import { JsonFormsControl } from '@jsonforms/angular';
 import { ControlProps } from '@jsonforms/core';
 
 @Component({
@@ -9,13 +9,11 @@ import { ControlProps } from '@jsonforms/core';
 })
 export class DataDisplayComponent extends JsonFormsControl {
 
+  private cdr = inject(ChangeDetectorRef);
   dataAsString: string | undefined;
-
-  constructor(service: JsonFormsAngularService) {
-    super(service);
-  }
 
   public override mapAdditionalProps(props: ControlProps) {
     this.dataAsString = JSON.stringify(props.data, null, 2);
+    this.cdr.markForCheck();
   }
 }
